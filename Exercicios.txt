@@ -1,0 +1,201 @@
+Print string
+
+print('Python na Escola de Programação da Alura.')
+---------------------
+
+fstring
+
+nome=input('Digite teu nome: ')
+idade=input('Digite tua idade: ')
+print(f'Meu nome é {nome} e tenho {idade} anos')
+-------------------------------------
+
+variaveis
+
+pi_arredondado=input('Digite o valor de PI')
+print(f'O valor de Pi arredondado é: {pi_arredondado:.2f}')
+------------------------------------------------------------
+
+par ou impar
+
+numero_inserido = int(input('Insira um numero inteiro: '))
+
+if numero_inserido % 2 == 0:
+    print(f'O numero {numero_inserido} é par')
+else:
+    print(f'O numero {numero_inserido} é impar') 
+--------------------------------------------------------
+
+classificar idade
+
+idade = int(input('Quantos anos voce possui:'))
+
+if idade >= 0 and idade <= 12:
+    print('Criança')
+elif idade >= 13 and idade <= 18:
+    print('Adolescente')
+elif idade > 18:
+    print("Adulto")
+else: 
+    print("Valor inválido!")
+-------------------------------------------------------
+
+comparar login
+
+nome_correto='Tiago'
+senha_correta='Tiago1'
+
+nome_usuario=input('Digite teu nome: \n')
+senha_usurario=input('Digite tua senha: \n')
+
+if nome_usuario == nome_correto and senha_usurario == senha_correta:
+    print('Voce acertou! O nome correto é {} e a senha correta é {} .\n'.format(nome_correto, senha_correta))
+else:
+    print('Voce errou! O nome correto é: {} e a senha correta é {}. \n'.format(nome_correto, senha_correta))
+---------------------------------------------------------
+
+plano carteziano
+
+coordenada_x=float(input('Digite o numero X:\n'))
+coordenada_y=float(input('Digite o numero Y:\n'))
+
+if coordenada_x > 0 and coordenada_y > 0:
+    print(f'Com os numeros X: {coordenada_x} e Y: {coordenada_y} voce se encontra no primeiro quadrante!\n')
+elif coordenada_x < 0 and coordenada_y > 0:
+    print(f'Com os numeros X: {coordenada_x} e Y: {coordenada_y} voce se encontra no Segundo quadrante!\n')
+elif coordenada_x < 0 and coordenada_y < 0:
+    print(f'Com os numeros X: {coordenada_x} e Y: {coordenada_y} voce se encontra no Terceiro quadrante!\n')
+elif coordenada_x > 0 and coordenada_y < 0:
+    print(f'Com os numeros X: {coordenada_x} e Y: {coordenada_y} voce se encontra no Segundo quadrante!\n')
+else:
+    print('o ponto está localizado no eixo ou origem')
+----------------------------------------------------------
+
+Lista de números de 1 a 10; Lista com quatro nomes; Lista com o ano que você nasceu e o ano atual.
+
+lista_de_numeros = [1,2,3,4,5,6,7,8,9,10]
+print(lista_de_numeros)
+
+lista_com_nomes = ['Jean', 'Estevão', 'Washington', 'Júlio']
+print(lista_com_nomes)
+
+lista_ano_nascimento_atual = [1983, 2024]
+print(lista_ano_nascimento_atual)
+-------------------------------------------------------
+
+Crie uma lista e utilize um loop for para percorrer todos os elementos da lista.
+
+atividades = ['Musculação', 'Tocar_teclado', 'Praticar_canto', 'Assistir_filmes', 'Socializar']
+
+for atividade in atividades:
+    print(f'- {atividade}')
+------------------------------------------------------
+
+Utilize um loop for para calcular a soma dos números ímpares de 1 a 10.
+
+lista_de_numeros = [1,2,3,4,5,6,7,8,9,10]
+impares = 0
+for i in lista_de_numeros:
+    if i %2 == 1:
+        impares += i
+        print(i)
+print(f' A soma é: {impares}')
+
+ou
+
+soma_impares = 0
+for i in range(1, 11, 2):
+    soma_impares += i
+print(soma_impares)
+------------------------------------------------------
+
+Utilize um loop for para imprimir os números de 1 a 10 em ordem decrescente.
+
+lista_de_numeros = [1,2,3,4,5,6,7,8,9,10]
+
+for i in lista_de_numeros:
+    lista_de_numeros.sort(reverse=True)
+print(lista_de_numeros)
+
+
+ou
+
+for i in range(10, 0, -1):
+    print(i)
+----------------------------------------------------
+
+Solicite ao usuário um número e, em seguida, utilize um loop for para imprimir a tabuada desse número, indo de 1 a 10
+
+tabuada = int(input('Deseja saber a tabuada de qual numero?\n'))
+
+for count in range(10):
+    print("%d x %d = %d" % (tabuada, count+1, tabuada*(count+1)))
+----------------------------------------------------
+
+Crie uma lista de números e utilize um loop for para calcular a soma de todos os elementos. Utilize um bloco try-except para lidar com possíveis exceções.
+
+lista_de_numeros = [10,20,30,40,50,60,70,80,90,100]
+resultado = 0
+try:
+    for i in lista_de_numeros:
+        resultado = sum(lista_de_numeros)
+    print(resultado)
+except:
+    print('erro')
+-----------------------------------------------------
+
+Construa um código que calcule a média dos valores em uma lista. Utilize um bloco try-except para lidar com a divisão por zero, caso a lista esteja vazia
+
+lista_de_numeros = [10,20,30,40,50,60,70,80,90,100]
+resultado = 0
+try:
+    for i in lista_de_numeros:
+        resultado = sum(lista_de_numeros)
+        media = resultado / len(lista_de_numeros)
+
+        print('O resultado da soma dos itens da lista é: %d' % (resultado))
+        print('O tamanho da lista é de: %d' % len((lista_de_numeros)))
+        print('A média entre a soma dos numeros da lista: %d e o tamanho da lista: %d é de: %d' % (resultado, len(lista_de_numeros), media))
+except ZeroDivisionError:
+    print("A lista está vazia, não é possível calcular a média.")
+except Exception as e:
+    print(f"Ocorreu um erro: {e}")
+--------------------------------------------------
+
+Crie um dicionário representando informações sobre uma pessoa, como nome, idade e cidade.
+
+informacao_pessoa = {'nome': 'Joana', 'idade' : 43, 'cidade' : 'Autralia'}
+--------------------------------------------------
+- Modifique o valor de um dos itens no dicionário (por exemplo, atualize a idade da pessoa);
+- Adicione um campo de profissão para essa pessoa;
+- Remova um item do dicionário.
+
+informacao_pessoa = {'nome': 'Joana', 'sobrenome': 'silva', 'idade' : 43, 'cidade' : 'Autralia'}
+
+informacao_pessoa.update({'idade':41})
+informacao_pessoa.update({'profissao':'contador'})
+del informacao_pessoa['sobrenome']
+
+print(informacao_pessoa)
+-------------------------------------------------------
+
+Crie um dicionário e verifique se uma chave específica existe dentro desse dicionário.
+
+chave_especifica = {'nome': 'Joana', 'sobrenome': 'silva', 'idade' : 43, 'cidade': 'Vitoria'}
+
+if 'nome' in chave_especifica:
+    print('nome')
+else:
+    print('não encontrado')
+---------------------------------------------------------
+
+Escreva um código que conte a frequência de cada palavra em uma frase utilizando um dicionário.
+
+frase = "O rato roeu a roupa do rei de Roma enquanto o rei de Roma estava distraido com o rato"
+contagem_palavras = {}
+palavras = frase.split()
+print(palavras)
+for palavra in palavras:
+    contagem_palavras[palavra] = contagem_palavras.get(palavra, 0) + 1
+print(contagem_palavras)
+---------------------------------------------------------
